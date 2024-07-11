@@ -5,7 +5,7 @@ contract ArrayShift{
     // 创建动态数组 并且初始化
     uint[] public nums = [1,2,3];
 
-    // remove
+    // remove, 通过顺移的方法，耗费的gas费用比较多
     function remove(uint index) public {
         require(index < nums.length, "out of bond");
         for(uint i = index; i < nums.length -1 ; i++){
